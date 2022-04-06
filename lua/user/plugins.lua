@@ -2,6 +2,7 @@
 return {
   { "folke/tokyonight.nvim" },
   { "justinmk/vim-sneak" },
-  { "unblevable/quick-scope" }
+  { "tpope/vim-surround" },
+  { "unblevable/quick-scope" },
 }
 
