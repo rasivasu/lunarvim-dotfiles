@@ -4,6 +4,7 @@
 local plugins = require("user.plugins")
 require("user.keymaps")
 require("user.vim-sneak")
+require("user.lualine")
 
 -- Additional Plugins
 lvim.plugins = plugins
