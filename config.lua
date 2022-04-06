@@ -1,3 +1,16 @@
+--------------------------------------------------------------------------------
+-- Plugin Management
+--------------------------------------------------------------------------------
+local plugins = require("user.plugins")
+require("user.keymaps")
+require("user.vim-sneak")
+
+-- Additional Plugins
+lvim.plugins = plugins
+
+-- Configure builtin plugins
+lvim.builtin.bufferline.active = false
+
 --[[
 lvim is the global options object
 
@@ -16,16 +29,13 @@ vim.g.tokyonight_style = "night"
 vim.o.background = "dark"
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
-lvim.leader = "space"
+-- lvim.leader = "space"
 -- add your own keymapping
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 -- unmap a default keymapping
 -- lvim.keys.normal_mode["<C-Up>"] = false
 -- edit a default keymapping
 -- lvim.keys.normal_mode["<C-q>"] = ":q<cr>"
-
--- Configure builtin plugins
-lvim.builtin.bufferline.active = false
 
 -- Change Telescope navigation to use j and k for navigation and n and p for history in both input and normal mode.
 -- we use protected-mode (pcall) just in case the plugin wasn't loaded yet.
@@ -141,13 +151,6 @@ lvim.builtin.treesitter.highlight.enabled = true
 --     filetypes = { "javascript", "python" },
 --   },
 -- }
-
--- Additional Plugins
-lvim.plugins = {
-  { "folke/tokyonight.nvim" },
-  { "justinmk/vim-sneak" },
-  { "unblevable/quick-scope" }
-}
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- lvim.autocommands.custom_groups = {
