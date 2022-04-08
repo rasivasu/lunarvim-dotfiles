@@ -9,7 +9,7 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- Miscellaneous actions
-keymap("i", "ii", "<ESC>", opts)
+keymap("i", "kj", "<ESC>", opts)
 
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
