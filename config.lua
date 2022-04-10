@@ -1,16 +1,9 @@
 --------------------------------------------------------------------------------
 -- Plugin Management
 --------------------------------------------------------------------------------
-local plugins = require("user.plugins")
+lvim.plugins = require("user.plugins")
 require("user.keymaps")
-require("user.vim-sneak")
 require("user.lualine")
-
--- Additional Plugins
-lvim.plugins = plugins
-
--- Configure builtin plugins
-lvim.builtin.bufferline.active = false
 
 --[[
 lvim is the global options object
@@ -30,7 +23,7 @@ vim.g.tokyonight_style = "night"
 vim.o.background = "dark"
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
--- lvim.leader = "space"
+-- mlvim.leader = "space"
 -- add your own keymapping
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 -- unmap a default keymapping
@@ -70,8 +63,9 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
-lvim.builtin.alpha.active = true
+lvim.builtin.alpha.active = false
 lvim.builtin.alpha.mode = "dashboard"
+lvim.builtin.bufferline.active = false
 lvim.builtin.notify.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
