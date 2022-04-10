@@ -1,5 +1,5 @@
 -- List your plugins here
-_G.modules = {
+local modules = {
   { "folke/tokyonight.nvim" },
   { "kana/vim-textobj-entire"},
   { "kana/vim-textobj-indent"},
@@ -18,4 +18,4 @@ _G.modules = {
   { "tpope/vim-surround" },
 }
 
-return _G.modules
+return modules
