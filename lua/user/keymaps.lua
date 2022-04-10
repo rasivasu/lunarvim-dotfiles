@@ -1,16 +1,24 @@
-local opts = { noremap = true, silent = true }
+-- keymappings [view all the defaults by pressing <leader>Lk]
+-- unmap a default keymapping
+-- lvim.keys.normal_mode["<C-Up>"] = false
+-- edit a default keymapping
+-- lvim.keys.normal_mode["<C-q>"] = ":q<cr>"
 
 -- Shorten function name
-local keymap = vim.api.nvim_set_keymap
-
---Remap space as leader key
-keymap("", "<Space>", "<Nop>", opts)
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+local insert = lvim.keys.insert_mode
+local normal = lvim.keys.normal_mode
 
 -- Miscellaneous actions
-keymap("i", "kj", "<ESC>", opts)
+insert["kj"] = "<ESC>"
+normal["<C-s>"] = ":w<cr>"
+
+-- hop.nvim
+normal["<leader>m"] = ":HopWord<CR>"
 
 -- Navigate buffers
-keymap("n", "<S-l>", ":bnext<CR>", opts)
-keymap("n", "<S-h>", ":bprevious<CR>", opts)
+normal["<S-l>"] = ":bnext<CR>"
+normal["<S-h>"] = ":bprevious<CR>"
+
+-- Navigate tabs
+normal["<A-l>"]= ":tabnext<CR>"
+normal["<A-h>"] = ":tabprevious<CR>"
